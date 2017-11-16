@@ -1,0 +1,30 @@
+version: "3.3"
+
+services:
+    postgres:
+        image: postgres:10.0
+        env_file:
+            - ./postgres.env
+        restart: always
+        expose:
+            - "5432"
+
+    ethereum:
+        image: ethereum/client-go:v1.7.2
+        env_file:
+            - ./geth.env
+        restart: always
+        expose:
+            - "8545"
+        command: --rpc --rpcaddr 0.0.0.0 --syncmode "light"
+
+    chainlink:
+        image: smartcontract/chainlink:latest
+        env_file:
+            - ./chainlink.env
+        restart: always
+        ports: 
+            - "5100:5100"
+        links:
+            - "ethereum"
+            - "postgres"
