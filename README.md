@@ -72,7 +72,7 @@ NOTIFICATION_EMAIL=test@test.com
 
 To expand on the properties listed above:
 - `DATABASE_URL`: This is the postgres connection string. By default it points to the docker container which runs postgres. The password needs to align with `POSTGRES_PASSWORD` in `postgres.env`.
-- `PRIVATE_KEY_PASSWORD`: This will be your password for you're coordinator key pair stored in the DB. **This is critical to change when running on main-net.**
+- `PRIVATE_KEY_PASSWORD`: This will be your password for your key-pair files stored in the database (table: key_pairs). **This is critical to change when running on main-net.**
 - `ETHEREUM_URL`: The ethereum client URL. This points to the geth instance running within the docker container.
 - `ETHEREUM_EXPLORER_URL`: The ethereum explorer URL. Currently points to the eth testnet.
 - `NOTIFICATION_EMAIL`: Email address to send node notifications to.
