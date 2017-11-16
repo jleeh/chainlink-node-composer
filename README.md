@@ -7,8 +7,8 @@ Docker compose image for a Chainlink node. This includes all the required depend
 - [License](#license)
 
 ## Dependencies
-- [Docker] (https://www.docker.com/)
-- [Docker Compose] (https://docs.docker.com/compose/) (Bundled with later Docker versions)
+- Docker (https://www.docker.com/)
+- Docker Compose (https://docs.docker.com/compose/) (Bundled with later Docker versions)
 
 ## Usage
 Clone the git repo, then run the following commands:
