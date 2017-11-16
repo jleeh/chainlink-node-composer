@@ -19,7 +19,7 @@ services:
         command: --rpc --rpcaddr 0.0.0.0 --syncmode "light"
 
     chainlink:
-        image: smartcontract/chainlink:latest
+        build: "chainlink/"
         env_file:
             - ./chainlink.env
         restart: always
@@ -28,3 +28,5 @@ services:
         links:
             - "ethereum"
             - "postgres"
+        volumes:
+            - .:/host
