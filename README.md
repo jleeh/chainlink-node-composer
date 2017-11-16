@@ -77,7 +77,7 @@ To expand on the properties listed above:
 - `ETHEREUM_EXPLORER_URL`: The ethereum explorer URL. Currently points to the eth testnet.
 - `NOTIFICATION_EMAIL`: Email address to send node notifications to.
 
-A full list of Chainlink environment variables can be found (here)[https://github.com/thodges-gh/ChainLink-Node/blob/master/EnvironmentVariables.md]
+A full list of Chainlink environment variables can be found [here](https://github.com/thodges-gh/ChainLink-Node/blob/master/EnvironmentVariables.md)
 
 ### Postgres
 In the `postgres.env` file, you'll find the following populated:
