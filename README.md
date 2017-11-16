@@ -33,10 +33,8 @@ docker exec -it $(docker ps -q --filter ancestor=smartcontract/chainlink) rails 
 If that command returns a number, for example `4564112`, then it works!
 
 For further information on how to interact with your node, or for Chainlink in general, read the following documentation:
-[Documentation] (https://chainlink-docs.smartcontract.com)
-[Github] (https://github.com/smartcontractkit/chainlink)
+- Documentation (https://chainlink-docs.smartcontract.com)
+- Github (https://github.com/smartcontractkit/chainlink)
 
 ## License
 [Smart-Oracle License](LICENSE.md)
- 
-
