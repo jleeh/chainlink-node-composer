@@ -63,7 +63,7 @@ EMAIL_USERNAME=test@test.com
 EMAIL_PASSWORD=password
 
 # Ethereum Client Properties
-ETHEREUM_URL=https://ethereum:8545
+ETHEREUM_URL=http://ethereum:8545
 ETHEREUM_EXPLORER_URL=https://testnet.etherscan.io
 
 # Node Notification Email
@@ -88,6 +88,10 @@ POSTGRES_PASSWORD=password
 
 ### Special Thanks
 - @thodges-gh: This image was set-up with the information found in https://github.com/thodges-gh/ChainLink-Node
+
+## Donate
+If you found this useful and would like to donate:
+- ETH: 0x58f251EAdEF20c6aB734bF166EF7d61a79B12df4
 
 ## Futher Reading
 For further information on how to interact with your node, or for Chainlink in general, read the following documentation:
