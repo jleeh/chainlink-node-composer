@@ -6,8 +6,8 @@ services:
         env_file:
             - ./postgres.env
         restart: always
-        ports:
-            - "5432:5432"
+        expose:
+            - "5432"
             
     ethereum:
         image: ethereum/client-go:v1.7.2
