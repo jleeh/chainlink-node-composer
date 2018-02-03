@@ -1,13 +1,24 @@
-version: "3.3"
+version: "2"
 
 services:
-  postgres:
-    image: postgres:10.0
+  postgres-slave:
+    image: "nebirhos/postgres-replication"
+    ports:
+      - 5433:5432
+    links:
+      - postgres-master
     env_file:
       - ./postgres.env
-    restart: always
-    expose:
-      - "5432"
+      - ./postgres-slave.env
+    volumes:
+      - 'pg-slave:/var/lib/postgresql/data'
+
+  postgres-master:
+    image: "nebirhos/postgres-replication"
+    ports:
+      - 5432:5432
+    env_file:
+      - ./postgres.env
     volumes:
       - 'pg:/var/lib/postgresql/data'
             
@@ -29,8 +40,11 @@ services:
       - "5100:5100"
     links:
       - "ethereum"
-      - "postgres"
+      - "postgres-master"
+      - "postgres-slave"
     volumes:
       - .:/host
+
 volumes:
-  pg:
+  pg: ./master
+  pg-slave: ./slave
